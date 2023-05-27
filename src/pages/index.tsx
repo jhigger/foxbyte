@@ -50,6 +50,11 @@ const Home: NextPage = () => {
               <NavLink text={<FaDiscord size={20} />} />
             </ul>
           </nav>
+          <div className="-mt-16 flex h-full flex-col items-center justify-end text-white">
+            <div className="flex w-full items-center justify-end gap-4 p-4 text-xs uppercase">
+              <p>&copy; 2023 Company Name. All rights reserved</p>
+            </div>
+          </div>
         </div>
       </main>
     </>
