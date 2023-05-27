@@ -3,10 +3,18 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 
-const NavLink = ({ text }: { text: string | JSX.Element }) => {
+const NavLink = ({
+  text,
+  link,
+}: {
+  text: string | JSX.Element;
+  link?: string;
+}) => {
   return (
-    <li className="border-[1px] border-white border-opacity-80 bg-white bg-opacity-20 px-4 py-1 text-sm font-bold uppercase text-white">
-      {text}
+    <li className="border-[1px] border-white border-opacity-80 bg-white bg-opacity-20 px-4 py-1 text-sm font-bold uppercase text-white hover:bg-opacity-40">
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        {text}
+      </a>
     </li>
   );
 };
@@ -27,7 +35,7 @@ const Home: NextPage = () => {
               LOGO
             </div>
             <ul className="flex items-center justify-center gap-4">
-              <NavLink text={"Link 1"} />
+              <NavLink text={"Link 1"} link="https://jikan.so/" />
               <NavLink text={"Link 2"} />
               <NavLink text={"Link 3"} />
               <NavLink text={<FaTwitter size={20} />} />
