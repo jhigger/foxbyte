@@ -13,11 +13,11 @@ const NavLink = ({
   link?: string;
 }) => {
   return (
-    <li className="border-[1px] border-white border-opacity-80 bg-white bg-opacity-20 px-4 py-1 text-sm font-bold uppercase text-white hover:bg-opacity-40">
-      <a href={link} target="_blank" rel="noopener noreferrer">
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <li className="border-[1px] border-white border-opacity-80 bg-white bg-opacity-20 px-4 py-1 text-sm font-bold uppercase text-white hover:bg-opacity-40">
         {text}
-      </a>
-    </li>
+      </li>
+    </a>
   );
 };
 
