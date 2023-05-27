@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { type NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 import Loader from "~/components/Loader";
 
@@ -34,10 +35,13 @@ const Home: NextPage = () => {
       <main className="flex h-screen flex-col items-center justify-center bg-[url('https://placehold.co/1080x720?text=Image')] bg-cover bg-center bg-no-repeat p-8">
         <div className="h-full w-full border-[1px] border-white border-opacity-80">
           <nav className="flex items-center justify-between gap-4 border-b-[1px] border-white border-opacity-80 p-4">
-            <div className="flex items-center justify-center gap-4 font-bold text-white">
+            <Link
+              href="/"
+              className="flex items-center justify-center gap-4 font-bold text-white"
+            >
               <img src="" alt="" width={24} height={24} />
               LOGO
-            </div>
+            </Link>
             <ul className="flex items-center justify-center gap-4">
               <NavLink text={"Link 1"} link="https://jikan.so/" />
               <NavLink text={"Link 2"} />
