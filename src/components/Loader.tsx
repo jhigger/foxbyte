@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -41,7 +42,7 @@ const Loader = () => {
               },
             }}
           >
-            Logo
+            <img src="logo.png" alt="logo" width={64} height={64} />
           </motion.div>
         </motion.div>
       )}
