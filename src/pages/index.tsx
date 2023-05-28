@@ -61,8 +61,9 @@ const Home: NextPage = () => {
               })}
             </ul>
           </nav>
+          
           <div className="-mt-16 flex h-full flex-col items-center justify-end text-white">
-            <footer className="flex w-full items-center justify-end gap-4 p-4 text-xs uppercase">
+            <footer className="flex w-full items-center justify-end gap-4 border-t-[1px] border-white border-opacity-80 p-4 text-xs uppercase">
               <p>&copy; 2023 Company Name. All rights reserved</p>
             </footer>
           </div>
