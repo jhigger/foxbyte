@@ -22,9 +22,9 @@ const NavLink = ({ text, link }: NavLinkType) => {
 
 const Home: NextPage = () => {
   const navLinks: NavLinkType[] = [
-    { text: "Link 1", link: "https://jikan.so/" },
-    { text: "Link 2" },
-    { text: "Link 3" },
+    // { text: "Link 1", link: "https://jikan.so/" },
+    // { text: "Link 2" },
+    // { text: "Link 3" },
     { text: <FaTwitter size={20} />, link: "https://twitter.com/foxbyteNFT" },
     {
       text: <FaDiscord size={20} />,
