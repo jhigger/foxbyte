@@ -5,13 +5,12 @@ import Link from "next/link";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 import Loader from "~/components/Loader";
 
-const NavLink = ({
-  text,
-  link,
-}: {
+interface NavLinkType {
   text: string | JSX.Element;
   link?: string;
-}) => {
+}
+
+const NavLink = ({ text, link }: NavLinkType) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
       <li className="border-[1px] border-white border-opacity-80 bg-white bg-opacity-20 px-4 py-1 text-sm font-bold uppercase text-white hover:bg-opacity-40">
@@ -22,6 +21,14 @@ const NavLink = ({
 };
 
 const Home: NextPage = () => {
+  const navLinks: NavLinkType[] = [
+    { text: "Link 1", link: "https://jikan.so/" },
+    { text: "Link 2" },
+    { text: "Link 3" },
+    { text: <FaTwitter size={20} /> },
+    { text: <FaDiscord size={20} /> },
+  ];
+
   return (
     <>
       <Head>
@@ -43,11 +50,15 @@ const Home: NextPage = () => {
               LOGO
             </Link>
             <ul className="flex items-center justify-center gap-4">
-              <NavLink text={"Link 1"} link="https://jikan.so/" />
-              <NavLink text={"Link 2"} />
-              <NavLink text={"Link 3"} />
-              <NavLink text={<FaTwitter size={20} />} />
-              <NavLink text={<FaDiscord size={20} />} />
+              {navLinks.map((item, i) => {
+                return (
+                  <NavLink
+                    key={`link-${i}`}
+                    text={item.text}
+                    link={item.link}
+                  />
+                );
+              })}
             </ul>
           </nav>
           <div className="-mt-16 flex h-full flex-col items-center justify-end text-white">
