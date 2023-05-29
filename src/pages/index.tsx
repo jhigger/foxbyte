@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { motion } from "framer-motion";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -42,8 +43,69 @@ const Home: NextPage = () => {
 
       <Loader />
 
-      <main className="flex h-screen w-screen flex-col items-center justify-center bg-[url('../HOMEPAGE3_Animation_file_3_2.gif')] bg-cover bg-center bg-no-repeat p-8">
-        <div className="h-full w-full border-[1px] border-white border-opacity-80">
+      <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-[url('../HOMEPAGE3_Animation_file_3_2.gif')] bg-cover bg-center bg-no-repeat p-8">
+        <motion.div
+          className="absolute bottom-0 left-0 z-10"
+          initial={{
+            x: -300,
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: {
+              type: "spring",
+              delay: 4,
+              duration: 2,
+            },
+          }}
+        >
+          <motion.img
+            src="https://placehold.co/250x250?text=Floating+Image"
+            alt="floating"
+            animate={{
+              y: [0, -10, 0],
+              transition: {
+                type: "tween",
+                delay: 6,
+                duration: 4,
+                repeat: Infinity,
+              },
+            }}
+          />
+        </motion.div>
+        <motion.div
+          className="absolute bottom-0 right-0 z-10"
+          initial={{
+            x: 300,
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: {
+              type: "spring",
+              delay: 4,
+              duration: 2,
+            },
+          }}
+        >
+          <motion.img
+            src="https://placehold.co/250x250?text=Floating+Image"
+            alt="floating"
+            animate={{
+              y: [0, -15, 0],
+              transition: {
+                type: "tween",
+                delay: 6,
+                duration: 5,
+                repeat: Infinity,
+              },
+            }}
+          />
+        </motion.div>
+
+        <div className="z-20 flex h-full w-full flex-col border-[1px] border-white border-opacity-80">
           <nav className="flex items-center justify-between gap-4 border-b-[1px] border-white border-opacity-80 px-4">
             <Link
               href="/"
@@ -65,7 +127,9 @@ const Home: NextPage = () => {
             </ul>
           </nav>
 
-          <div className="-mt-16 flex h-full flex-col items-center justify-end text-white">
+          <div className="h-full"></div>
+
+          <div className="flex flex-col items-center justify-end text-white">
             <footer className="flex w-full items-center justify-end gap-4 border-t-[1px] border-white border-opacity-80 p-4 text-xs uppercase">
               <p>&copy; 2023 Foxbyte. All rights reserved</p>
             </footer>
