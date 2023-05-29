@@ -42,7 +42,7 @@ const Home: NextPage = () => {
 
       <Loader />
 
-      <main className="flex h-screen flex-col items-center justify-center bg-[url('https://placehold.co/1080x720?text=Image')] bg-cover bg-center bg-no-repeat p-8">
+      <main className="flex h-screen w-screen flex-col items-center justify-center bg-[url('../HOMEPAGE3_Animation_file_3_2.gif')] bg-cover bg-center bg-no-repeat p-8">
         <div className="h-full w-full border-[1px] border-white border-opacity-80">
           <nav className="flex items-center justify-between gap-4 border-b-[1px] border-white border-opacity-80 px-4">
             <Link
