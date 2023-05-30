@@ -44,7 +44,7 @@ const Home: NextPage = () => {
       </AnimatePresence>
 
       <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-[url('../assets/HOMEPAGE3_Animation_file_4_5.gif')] bg-cover bg-center bg-no-repeat p-8">
-        <motion.div
+        {/* <motion.div
           className="absolute bottom-0 left-0 z-10 hidden lg:block"
           initial={{
             x: -300,
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
               },
             }}
           />
-        </motion.div>
+        </motion.div> */}
 
         <div className="z-20 flex h-full w-full flex-col border-[1px] border-white border-opacity-10">
           <nav className="flex items-center justify-between gap-4 border-b-[1px] border-white border-opacity-10 px-4">
