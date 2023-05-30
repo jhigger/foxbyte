@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         )}
       </AnimatePresence>
 
-      <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-[url('../HOMEPAGE3_Animation_file_3_2.gif')] bg-cover bg-center bg-no-repeat p-8">
+      <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-[url('../assets/HOMEPAGE3_Animation_file_4_5.gif')] bg-cover bg-center bg-no-repeat p-8">
         <motion.div
           className="absolute bottom-0 left-0 z-10 hidden lg:block"
           initial={{
