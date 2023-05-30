@@ -43,7 +43,18 @@ const Home: NextPage = () => {
         )}
       </AnimatePresence>
 
-      <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-[url('../assets/HOMEPAGE3_Animation_file_4_5.gif')] bg-cover bg-center bg-no-repeat p-8">
+      <video
+        id="background-video"
+        autoPlay
+        loop
+        muted
+        poster="HOMEPAGE3_Animation_file_4_5.png"
+        className="fixed h-screen w-screen overflow-hidden object-cover"
+      >
+        <source src="Foxbyte_cleaned_Version_02_1.mp4" type="video/mp4" />
+      </video>
+
+      <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat p-8">
         {/* <motion.div
           className="absolute bottom-0 left-0 z-10 hidden lg:block"
           initial={{
