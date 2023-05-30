@@ -14,7 +14,7 @@ interface NavLinkType {
 const NavLink = ({ text, link }: NavLinkType) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <li className="border-[1px] border-white border-opacity-80 bg-white bg-opacity-20 px-4 py-1 text-sm font-bold uppercase text-white hover:bg-opacity-40">
+      <li className="border-[1px] border-white border-opacity-10 bg-white bg-opacity-20 px-4 py-1 text-sm font-bold uppercase text-white hover:bg-opacity-40">
         {text}
       </li>
     </a>
@@ -105,8 +105,8 @@ const Home: NextPage = () => {
           />
         </motion.div>
 
-        <div className="z-20 flex h-full w-full flex-col border-[1px] border-white border-opacity-80">
-          <nav className="flex items-center justify-between gap-4 border-b-[1px] border-white border-opacity-80 px-4">
+        <div className="z-20 flex h-full w-full flex-col border-[1px] border-white border-opacity-10">
+          <nav className="flex items-center justify-between gap-4 border-b-[1px] border-white border-opacity-10 px-4">
             <Link
               href="/"
               className="flex items-center justify-center text-2xl font-bold text-white"
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
           <div className="h-full"></div>
 
           <div className="flex flex-col items-center justify-end text-white">
-            <footer className="flex w-full items-center justify-end gap-4 border-t-[1px] border-white border-opacity-80 p-4 text-xs uppercase">
+            <footer className="flex w-full items-center justify-end gap-4 border-t-[1px] border-white border-opacity-10 p-4 text-xs uppercase">
               <p>&copy; 2023 Foxbyte. All rights reserved</p>
             </footer>
           </div>
