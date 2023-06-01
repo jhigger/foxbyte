@@ -15,7 +15,7 @@ const MobileMenu = ({
 }) => {
   return (
     <motion.nav
-      className="fixed z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-black bg-cover bg-center bg-no-repeat p-8"
+      className="fixed z-50 flex h-screen w-screen flex-col items-center justify-center overflow-y-scroll bg-black bg-cover bg-center bg-no-repeat p-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
