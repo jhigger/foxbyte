@@ -49,6 +49,7 @@ const Home: NextPage = () => {
         loop
         muted
         className="fixed h-screen w-screen overflow-hidden object-cover"
+        controls={false}
       >
         <source src="Foxbyte_cleaned_Version_02_1.webm" type="video/webm" />
         <source src="Foxbyte_cleaned_Version_02_1.mp4" type="video/mp4" />
