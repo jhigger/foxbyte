@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import { NavLink, type NavLinkType } from "./NavLink";
-import MenuButton from "./MenuButton";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import MenuButton from "./MenuButton";
+import { NavLink, type NavLinkType } from "./NavLink";
 
 const MobileMenu = ({
   navLinks,
@@ -15,7 +15,7 @@ const MobileMenu = ({
 }) => {
   return (
     <motion.nav
-      className="fixed z-50 flex h-screen w-screen flex-col items-center justify-center overflow-y-scroll bg-black bg-cover bg-center bg-no-repeat p-8"
+      className="fixed z-50 flex h-screen w-screen flex-col items-center justify-center overflow-y-scroll bg-black bg-cover bg-center bg-no-repeat p-8 lg:hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
