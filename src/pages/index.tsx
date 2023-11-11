@@ -14,6 +14,7 @@ const Home: NextPage = () => {
   const navLinks: NavLinkType[] = [
     { text: "Staking", link: "https://staking.foxbyte.app/" },
     { text: "Lootybyte", link: "https://lootbyte-client.vercel.app/boxes" },
+    { text: "Whitepaper", link: "https://whitepaper.foxbyte.app/" },
     { text: <FaTwitter size={20} />, link: "https://twitter.com/foxbyteNFT" },
     {
       text: <FaDiscord size={20} />,
